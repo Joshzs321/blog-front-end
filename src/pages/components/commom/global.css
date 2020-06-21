@@ -1,0 +1,14 @@
+body {
+    background-color: #dddddd;
+}
+
+.second-title {
+    font-size: 0.15rem;
+    color: grey;
+    padding: 0.13rem 0.2rem 0 0.2rem;
+}
+
+@font-face {
+    font-family: 'blogIcon';
+    src: url("../../../assets/font/iconfont.woff") format('woff')
+}
