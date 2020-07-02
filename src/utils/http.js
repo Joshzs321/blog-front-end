@@ -21,8 +21,9 @@ export default {
                 //在请求发送前拦截后可进行一定处理后再发送到后台，例如data，header
 
 
-                // config.params = { 'token': cookies.get("token") }
-                //返回到axios内部
+                config.params = { 'token': "123" }
+                config.headers['token'] = "123"
+                    //返回到axios内部
                 return config
             },
             err => {
@@ -49,7 +50,7 @@ export default {
         if (!window.$http) {
             this.init()
         }
-        console.log("33")
+
         return new Promise((resolve, reject) => {
             $http.get(url, {
                 params: params
@@ -61,7 +62,6 @@ export default {
         if (!window.$http) {
             this.init()
         }
-        console.log("33")
         return new Promise((resolve, reject) => {
             $http.post(url, qs.stringify(params)).then(res => {
                 resolve(res.data)
